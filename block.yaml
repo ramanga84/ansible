@@ -1,0 +1,18 @@
+---
+- name: block
+  hosts: all
+  tasks: 
+   - block:
+      - name: checking
+        uri:
+         url: http://www.google.com
+         return_content: yes
+     rescue:
+      - name: Not work 
+        debug:
+        msg: "not working"
+     always:
+      - name: work
+        debug:
+        msg: "working"
+...

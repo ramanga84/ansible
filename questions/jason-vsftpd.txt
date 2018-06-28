@@ -1,0 +1,25 @@
+Check vsftpd package is there or not ?
+if the package is there means print the following message 
+"VSFTPD PACKAGE HAS BEEN INSTALLED"
+
+if the package is not there means print the following message 
+
+"VSFTPD PACKAGE NOT INSTALLED"
+
+"if the package is there means start the vsftpd service"
+
+if the vsftpd service running means print the following message
+
+"vsftpd service is running"
+
+if the vsftpd service not running means print the following message
+
+"vsftpd service is not running"
+
+
+If both vsftpd package is not available and VSFTPD service is not running means print the following message
+
+"vsftpd package not installed and service is not running"
+
+
+

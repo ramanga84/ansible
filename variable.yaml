@@ -1,0 +1,8 @@
+---
+- name: playing with  global variable
+  hosts: webserver
+  tasks:
+   - name: Install PHP
+     yum:
+      name: "{{pack}}" 
+      state: latest

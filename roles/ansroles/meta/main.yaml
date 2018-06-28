@@ -1,0 +1,7 @@
+---
+dependencies:
+  - { role : firewall }
+ #- { role:  firewall, fire_serv: http }
+ #- { role:  firewall, fire_serv: vsftpd }
+ #- { role:  firewall, fire_serv: ftp }
+ #- { role:  firewall, fire_serv: ssh }

@@ -1,0 +1,14 @@
+---
+- name: Remove httpd
+  yum: "name=httpd state=absent"
+- name: Remove vsftpd
+  yum: "name=vsftpd state=absent"
+- name: install httpd
+  yum: "name=httpd state=latest"
+- name: install vsftpd
+  yum: "name=vsftpd state=latest"
+- name: Check the service and copy index.php
+  command: rpm -qa |grep httpd
+  register: x
+  notify: 
+   - copy indexfile

@@ -1,0 +1,13 @@
+---
+- name: Remove HTTPD
+  yum: name=httpd state=absent
+- name: Install httpd
+  yum: name=httpd state=latest 
+- name: COpy the test1.txt to test1.txt
+  copy: src=test1.txt dest=/var/tmp
+- name: remove the file if exists  
+  file: path=/var/tmp/machineoutput.txt state=absent
+- name: Copy the variables to machineoutput 
+  template: src=machineoutput.j2 dest=/var/tmp/machineoutput.txt
+
+...

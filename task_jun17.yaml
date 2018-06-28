@@ -1,0 +1,41 @@
+---
+- name: task to verify the package and service
+  hosts: all
+  ignore_errors: yes
+  tasks:
+   - name: Verify the package
+     shell: rpm -qa |grep kwallet
+     register: x
+   - name: print in jason
+     debug: var='x'
+   - name: Display yes
+     debug: msg="Pack is not installed"
+     when: x.stdout == ""
+   - name: Display no
+     debug: msg="package is not installed"
+     when: x.stdout != ""
+   - name: Install the packs
+     yum:
+      name: kwallet
+      state: latest
+     when: x.stdout != ""
+
+   - name: Verify the service
+     shell: ps -ef |grep httpd
+     register: y
+   - name: Print JSON format
+     debug: var='y'
+   - name: Display the service
+     debug: msg="service is not running"
+     when: y.stdout != ""
+   - name: Display yes
+     debug: msg=" running"
+     when: y.stdout == ""
+   - name: Service restart
+     service:
+      name: httpd
+      state: started
+      enabled: yes
+     when: y.stdout != ""
+...
+

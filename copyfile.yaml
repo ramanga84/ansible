@@ -1,0 +1,18 @@
+---
+- name: create a webserver
+  hosts: webserver
+  tasks:
+   - name: Copy a file
+     copy: 
+      src: index.j2
+      #content: "This is a first step to automation"
+      dest: "/var/www/html/index2.html"
+      mode: 0644
+     notify: 
+      - restart service
+  handlers: 
+   - name: restart service
+     service:
+       name: httpd
+       state: started
+...

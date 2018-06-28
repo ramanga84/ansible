@@ -1,0 +1,8 @@
+1. Installing patches
+2. Server Build (provisioning)
+3. Server Decommission (de-provisioning)
+4. troubleshooting
+5. troubleshooting compliance level
+6. bulk implementation - rand some virus - 1200,Intel = specter/meltdown patches 32 packages)
+7. try to document all the re-occurring activities and try to create relevant reusable roles and keep it in your environment.
+

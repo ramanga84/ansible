@@ -1,0 +1,39 @@
+[ansible@ansible dev]$ cat mount.yml
+---
+- name: mount and patch it
+  hosts: all
+  tasks:
+   - name: create mount directory
+     file:
+      path: /data
+      state: directory
+   - name: mount the partition
+     mount:
+      path: /data
+      src: /dev/sdb1
+      fstype: ext4
+      state: mounted
+     when: inventory_hostname in groups ['nfsserver']
+   - name: put an export entry in the file
+     copy:
+      content: "/data *(rw,sync)"
+      dest: /etc/exports
+      mode: 0644
+     when: inventory_hostname in groups ['nfsserver']
+   - name: install nfs server
+     yum:
+      name: nfs-utils
+      state: latest
+   - name: start the nfs service
+     service:
+      name: nfs-server
+      state: restarted
+      enabled: yes
+     when: inventory_hostname in groups ['nfsserver']
+   - name: mount the partition
+     mount:
+      path: /data
+      src: ansible:/data
+      fstype: nfs
+      state: mounted
+     when: inventory_hostname in groups ['backup']

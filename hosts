@@ -1,0 +1,13 @@
+[webserver]
+ansiblelab
+localhost
+
+[jumphost]
+ansiblec2
+ansiblec1
+
+[dbserver]
+ansiblelab
+
+[webserver:vars]
+pack=php

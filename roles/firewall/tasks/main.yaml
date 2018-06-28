@@ -1,0 +1,15 @@
+---
+- name: Install Firewal
+  package: name=firewalld state=latest
+- name: Start the firewalld servie
+  service: 
+   name: firewalld
+   state: started
+   enabled: yes
+ #name: Opn the port
+  #firewalld:
+ #  name: https #"{{ fire_serv }}"
+  # permanent: true
+  # state: enabled
+  #notify:
+  # - restart firewalld

@@ -1,0 +1,12 @@
+prod:
+    - raman
+    - ans
+    - gabrara
+    - sundsat
+dev:
+    - cssspt
+    - cssunix
+
+uat:
+    - uatcss
+    - dbdam

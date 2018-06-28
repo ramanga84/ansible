@@ -1,0 +1,42 @@
+---
+- name: task to verify the package and service
+  hosts: all
+  ignore_errors: yes
+  tasks:
+   - name: Verify the package
+     shell: rpm -qa |grep httpd
+     register: x
+   - name: print in jason
+     debug: var='x'
+   - name: Display yes
+     debug: msg="Pack is installed"
+     #when: x.stdout == ""
+     when: x.stdout|success
+   - name: Display no
+     debug: msg="package is not installed"
+     #when: x.stdout != ""
+     when: x.stdout|failed
+   - name: Install the packs
+     yum:
+      name: httpd
+      state: latest
+     when: x.stdout|failed
+
+   - name: Verify the service
+     shell: ps -ef |grep httpd
+     register: y
+   - name: Print JSON format
+     debug: var='y'
+   - name: Display the service
+     debug: msg="service is running"
+     when: y.stdout != ""
+   - name: DIsplay yes
+     debug: msg="Not running"
+     when: y.stdout == ""
+   - name: Service restart
+     service:
+      name: httpd
+      state: started
+      enabled: yes
+...
+

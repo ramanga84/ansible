@@ -1,0 +1,15 @@
+- name: Create a webserver
+  hosts: all 
+  tasks:
+  - name: Copy a file
+    copy:
+     content: "This is a first test for automation"
+     dest: /var/www/html/index.html
+     mode: 0644
+  notify: 
+   - restart service
+  handlers:  
+   - name: restart the httpd
+     service:
+       name: httpd
+       state: restarted

@@ -1,0 +1,6 @@
+---
+- name: copy indexfile
+  copy:
+   src: index.j2
+   dest: /var/www/html/index.php 
+...

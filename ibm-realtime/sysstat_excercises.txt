@@ -1,0 +1,7 @@
+Install sysstat package in centos and ubuntu
+verify the sysstat in ubuntu and centos
+install sysstat if not installed in ubuntu and centos
+take sysstat file backup in ubuntu and centos with date and time stamp 
+configure sysstat file in cron.d in ubuntu and centos
+restart the sysstat service in ubuntu and centos
+ 

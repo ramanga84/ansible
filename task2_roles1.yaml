@@ -1,0 +1,6 @@
+---
+- name: task for roles test
+  hosts: all
+  roles:
+   - role: ansroles
+...
