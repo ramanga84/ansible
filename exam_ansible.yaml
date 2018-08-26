@@ -1,0 +1,11 @@
+---
+- name: jinja template
+  hosts: ansiblec1, ansiblec2
+  tasks:
+   - name: create the file
+     template: 
+      src: hostinfo.j2
+      dest: /var/www/vhosts/{{ ansible_hostname }}/hostinfo.html
+      owner: ansible
+      group: ansible
+      mode: 0644

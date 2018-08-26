@@ -1,0 +1,6 @@
+---
+- name: Playbook to print a version of python in all hosts
+  hosts: all
+  tasks:
+   - name: Print the python version
+     

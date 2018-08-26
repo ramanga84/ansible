@@ -1,0 +1,4 @@
+- name: lineinreplace module test
+  hosts: webserver
+  tasks:
+   

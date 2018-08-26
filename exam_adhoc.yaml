@@ -1,0 +1,20 @@
+---
+- name: Adhoc.sh question
+  hosts: ansiblec1,ansiblec2
+  tasks:
+   - name: create the runme.sh
+     file:
+      path: /usr/local/bin/runme.sh
+      state: touch
+      mode: 0755
+      owner: ansible
+      group: ansible
+   - name: copy the file to /usr/local
+     copy:
+      remote_src: /usr/local/bin/runme.sh
+      remote_dest: /usr/local/runme.sh
+...
+
+
+
+      

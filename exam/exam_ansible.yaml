@@ -1,0 +1,8 @@
+---
+- name: Copy template
+  hosts: ansiblec1,ansiblec2
+  tasks:
+   - name: Pass the variables
+     copy:
+      content: "{{ ansible_hostname }}, {{ ansible_default_ipv4.address }}, {{ ansible_default_ipv4.macaddress }}, {{ ansible_processor_count }}"
+      dest: /var/www/vhosts/{{ ansible_hostname }}/hostinfo2.html

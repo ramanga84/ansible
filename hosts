@@ -11,3 +11,10 @@ ansiblelab
 
 [webserver:vars]
 pack=php
+
+[production]
+ansiblelab
+
+[backup]
+ansiblec1
+ansiblec2

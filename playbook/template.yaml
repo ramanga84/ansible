@@ -1,0 +1,9 @@
+---
+- name: Play with j2 files
+  hosts: jumphost 
+  tasks:
+  - name: Modify
+    template:
+     src: jumphost.j2
+     dest: /etc/motd
+     mode: 0644

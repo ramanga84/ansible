@@ -1,0 +1,25 @@
+---
+- name: tag playbook
+  hosts: production,backup
+  tasks:
+   - name: Archive prod
+     archive: 
+      path: /var/www/html
+      dest: /var/tmp/production.tar.gz
+      format: gz
+     tags:
+      - production
+   - name: Backup 
+     archive:
+      path: /var/log/
+      dest: /var/tmp/backup.tar.gz
+      format: gz
+     tags:
+      - backup
+...
+
+     
+
+
+
+      

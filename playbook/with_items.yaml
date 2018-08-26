@@ -1,0 +1,22 @@
+---
+- name: play with roles and withitems
+  hosts: all
+  roles: 
+   - role: examfun
+  tasks:
+   - name: Group creation
+     group:
+      name: "{{ item }}"
+      state: present
+     with_items:
+      - prod
+      - dev
+      - uat
+   - name: create user
+     user:
+      name: "{{ item }}"
+      state: present
+     with_items:
+      - "{{ prod }}"
+...
+

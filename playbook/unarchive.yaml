@@ -1,0 +1,25 @@
+---
+- name: Unarchive the zip using password
+  hosts: ansiblec1,ansiblec2
+  vars_files:
+   - crypt.yaml
+  tasks:
+   - name: install zip utility
+     yum:
+      name: unzip
+      state: latest
+   - name: create directory
+     file:
+      path: /var/www/html/vault
+      state: directory
+      mode: 0755
+   - name: download zip file
+     get_url:
+      url: http://192.168.0.106/
+      dest: /var/www/html/vault/vault.zip
+      mode: 0644
+   - name: unzip 
+     command: unzip -o -P {{ password }} /var/www/html/vault/vault.zip
+     args:
+      chdir: /var/www/html/vault/
+...

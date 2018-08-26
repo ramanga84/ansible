@@ -1,0 +1,15 @@
+---
+- name: checking package is installed
+  hosts: all
+  tasks:
+   - name: Check the service
+     command: rpm -qa httpd
+     register: dummy
+   - name: printing the jason
+     debug: var='dummy'
+   - name: Install Package
+     yum: 
+      name: httpd
+      state: latest
+     when: dummy.stdout == ""
+...

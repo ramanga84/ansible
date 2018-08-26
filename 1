@@ -1,0 +1,8 @@
+- name: copying file laybook
+  hosts: jumpserver
+  tasks:
+   - name: copy the file
+     copy: 
+      src: /etc/passwd
+      dest: /tmp/
+---

@@ -1,0 +1,16 @@
+---
+- name: exam tag play
+  hosts: production, backup
+  tasks:
+   - name: production archive
+     command: tar czf /var/tmp/examproduction.tar.gz /var/log/
+     when: inventory_hostname in groups [ 'production' ]
+     tags:
+      - prod
+   - name: backup archive
+     command: tar czf /var/tmp/exambackup.tar.gz /var/www/html
+     when: inventory_hostname in groups [ 'backup' ]
+     tags:
+      - back
+...
+

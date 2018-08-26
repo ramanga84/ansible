@@ -1,0 +1,18 @@
+---
+- name: variables test paybook
+  hosts: jumphost
+  tasks:
+  vars:
+   tel: telnet
+   vi: vim
+  tasks:
+   - name: Install telnet 
+     yum:
+      name: "{{ tel }}"
+      state: latest
+   - name: install vim
+     yum:
+      name: "{{ vi }}"
+      state: latest
+
+     

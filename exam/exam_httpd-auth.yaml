@@ -1,0 +1,37 @@
+---
+- name: htauth question playbook
+  hosts: ansiblelab,ansiblec1
+  tasks:
+   - name: Create the directory 
+     file:
+      path: /var/www/html/protected
+      state: directory
+      mode: 0755
+   - name: Download htpassword
+     get_url:
+      url: http://192.168.0.29/httpaccess
+      dest: /var/www/html/protected
+      mode: 0644
+   - name: Download htpassord
+     get_url:
+      url: http://192.168.0.29/htpassword
+      dest: /var/www/html/protected
+      mode: 0644
+   - name: download htindex
+     get_url:
+      url: http://192.168.0.29/htindex
+      dest: /var/www/html/protected
+   - name: replace authoverride
+     replace:
+      path: /etc/httpd/conf/httpd.conf
+      regexp: AuthOverride
+      replace: AuthConfig
+      backup: yes
+     notify:
+      - restart httpd
+  handlers:
+   - name: restart httpd
+     service:
+      name: httpd
+      state: restarted
+...

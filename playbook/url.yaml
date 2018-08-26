@@ -1,0 +1,8 @@
+---
+- name:
+  hosts: all
+  tasks:
+   - name: chekcing url
+     uri:
+      url: http://www.google.com
+      return_content: yes

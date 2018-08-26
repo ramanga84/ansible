@@ -1,0 +1,12 @@
+---
+- name: installing a package
+  hosts: all
+  vars_prompt:
+  - name: package 
+    prompt: "enter the package name"
+  tasks: 
+   - name: install given package
+     yum:
+      name: "{{ package }}"
+      state: latest
+

@@ -1,0 +1,10 @@
+- name: copying file laybook
+  hosts: jumphost
+  tasks:
+   - name: copy the file
+     copy: 
+      src: /etc/passwd
+      dest: /tmp/pass
+      owner: ansible
+      group: ansible
+      mode: 0644

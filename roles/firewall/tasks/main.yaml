@@ -6,10 +6,10 @@
    name: firewalld
    state: started
    enabled: yes
- #name: Opn the port
-  #firewalld:
- #  name: https #"{{ fire_serv }}"
-  # permanent: true
-  # state: enabled
-  #notify:
-  # - restart firewalld
+- name: Opn the port
+  firewalld:
+   service: "{{ fire_serv }}"
+   permanent: true
+   state: enabled
+  notify:
+   - restart firewalld

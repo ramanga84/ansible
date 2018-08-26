@@ -1,0 +1,10 @@
+---
+- name: ansible use of pipe
+  hosts: all
+  tasks:
+   - name: Verify the package
+     shell: rpm -qa |grep httpd
+     register: x
+   - name: Print
+     debug: var='x'
+
