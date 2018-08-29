@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~H
 # Last Search Pattern:
-~MSle0~/mode
+~MSle0~/test
 
 # Last Substitute Search Pattern:
 ~MSle0&remote_
@@ -19,10 +19,10 @@ $
 # Command Line History (newest to oldest):
 :wq!
 :wq
-:q
-:%s/remote_//
 :q!
+:q
 :w
+:%s/remote_//
 :autocmd 
 :set nu
 :source .vimrc
@@ -43,6 +43,8 @@ $
 :2
 
 # Search String History (newest to oldest):
+?/test
+?/answer
 ?/mode
 ?/remot
 ?/remotr
@@ -57,42 +59,122 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	"
+"0	LINE	0
+	  with_items:
 "1	LINE	0
 	
 "2	LINE	0
-	   - "{{ ansible_default_ipv4.address }}"
+	
 "3	LINE	0
-	  vddars:
+	    name: "{{ revoke }}"
 "4	LINE	0
-	   - hostinfo.j2
+	    groups: staff,webclients
 "5	LINE	0
-	      path: /var/www/html/hostinfo.html
+	    name: "{{ guests }}"
 "6	LINE	0
-	     tag: production
+	                      ...
 "7	LINE	0
 	
 "8	LINE	0
-	      owner: 
+	   - webclients
 "9	LINE	0
-	      state: file
+	   - guests
 ""-	CHAR	0
-	s
+	 
 
 # File marks:
-'0  6  13  ~/exam_ansible.yaml
-'1  1  0  ~/files/hostinfo.j2
-'2  2  140  ~/files/hostinfo.j2
-'3  7  144  ~/exam/exam_ansible.yaml
-'4  8  59  ~/exam/exam_ansible.yaml
-'5  7  10  ~/exam_ansible.yaml
-'6  1  87  ~/hostinfo.j2
-'7  11  6  ~/exam_ansible.yaml
-'8  1  123  ~/hostinfo.j2
-'9  12  3  ~/exam_ansible.yaml
+'0  29  2  ~/exam/roles/examfun/tasks/main.yaml
+'1  31  0  ~/exam/roles/examfun/tasks/main.yaml
+'2  30  18  ~/exam/roles/examfun/tasks/main.yaml
+'3  8  18  ~/exam_roles.yaml
+'4  22  2  ~/exam/unarchive.yaml
+'5  1  7  ~/exam/.vaultpwd
+'6  1  15  ~/exam/crypt.yaml
+'7  2  7  ~/exam/crypt.yaml
+'8  30  18  ~/roles/usercreate/tasks/main.yaml
+'9  4  18  ~/roles/usercreate/tasks/main.yaml
 
 # Jumplist (newest first):
+-'  29  2  ~/exam/roles/examfun/tasks/main.yaml
+-'  31  0  ~/exam/roles/examfun/tasks/main.yaml
+-'  30  3  ~/exam/roles/examfun/tasks/main.yaml
+-'  10  0  ~/exam/roles/examfun/tasks/main.yaml
+-'  8  18  ~/exam_roles.yaml
+-'  9  2  ~/exam_roles.yaml
+-'  22  2  ~/exam/unarchive.yaml
+-'  1  0  ~/exam/unarchive.yaml
+-'  1  7  ~/exam/.vaultpwd
+-'  1  15  ~/exam/crypt.yaml
+-'  2  7  ~/exam/crypt.yaml
+-'  30  18  ~/roles/usercreate/tasks/main.yaml
+-'  4  5  ~/roles/usercreate/tasks/main.yaml
+-'  6  2  ~/roles/usercreate/tasks/main.yaml
+-'  1  0  ~/main.yaml
+-'  5  5  ~/roles/usercreate/tasks/main.yaml
+-'  1  0  ~/roles/usercreate/tasks/main.yaml
+-'  13  0  ~/exam_roles.yaml
+-'  1  0  ~/exam_roles.yaml
+-'  26  8  ~/exam/roles/examfun/tasks/main.yaml
+-'  13  4  ~/exam/roles/examfun/tasks/main.yaml
+-'  10  2  ~/exam/roles/examfun/meta/main.yaml
+-'  1  0  ~/exam/roles/examfun/meta/main.yaml
+-'  9  11  ~/exam/roles/examfun/vars/main.yaml
+-'  1  0  ~/exam/roles/examfun/vars/main.yaml
+-'  11  9  ~/exam/roles/examfun/tasks/main.yaml
+-'  32  3  ~/exam/roles/examfun/tasks/main.yaml
+-'  15  4  ~/exam/roles/examfun/tasks/main.yaml
+-'  1  0  ~/exam/roles/examfun/tasks/main.yaml
+-'  5  21  ~/exam/exam_galaxy.yaml
+-'  1  0  ~/exam/exam_galaxy.yaml
+-'  4  34  ~/ansible.cfg
+-'  1  0  ~/ansible.cfg
+-'  29  21  ~/exam/exam_failweb.yaml
+-'  16  6  ~/exam/exam_failweb.yaml
+-'  30  30  ~/exam/exam_failweb.yaml
+-'  18  5  ~/exam/exam_failweb.yaml
+-'  8  6  ~/exam/exam_failweb.yaml
+-'  1  0  ~/exam/exam_failweb.
+-'  25  5  ~/exam/exam_failweb.yaml
+-'  31  0  ~/exam/exam_failweb.yaml
+-'  1  0  ~/exam/exam_failweb.yaml
+-'  14  11  ~/exam/exam_access.yaml
+-'  13  5  ~/exam/exam_access.yaml
+-'  11  2  ~/exam/exam_access.yaml
+-'  4  2  ~/exam/exam_access.yaml
+-'  5  2  ~/exam/exam_access.yaml
+-'  6  3  ~/exam/exam_access.yaml
+-'  20  6  ~/exam/exam_orig_access.yaml
+-'  18  10  ~/exam/exam_orig_access.yaml
+-'  1  0  ~/exam/exam_orig_access.yaml
+-'  23  0  ~/exam/exam_access.yaml
+-'  1  0  ~/exam_access.yaml
+-'  1  0  ~/exam/exam_access.yaml
+-'  15  2  ~/exam/exam_saveabort.yaml
+-'  1  0  ~/exam/exam_saveabort.yaml
+-'  16  57  ~/exam/saveabort.yaml
+-'  12  58  ~/exam/saveabort.yaml
+-'  23  7  ~/exam/saveabort.yaml
+-'  9  8  ~/exam/saveabort.yaml
+-'  18  9  ~/exam/saveabort.yaml
+-'  24  0  ~/exam/saveabort.yaml
+-'  1  0  ~/exam/saveabort.yaml
+-'  9  0  ~/exam/noshutdown.yaml
+-'  1  0  ~/exam/noshutdown.yaml
+-'  3  25  ~/exam/shutdown.yaml
+-'  1  0  ~/exam/shutdown.yaml
+-'  4  7  ~/exam_dummy.yaml
+-'  22  5  ~/exam_dummy.yaml
+-'  24  6  ~/exam_dummy.yaml
+-'  15  6  ~/exam_dummy.yaml
+-'  3  2  ~/exam_dummy.yaml
+-'  19  6  ~/exam_dummy.yaml
+-'  8  21  ~/exam_dummy.yaml
+-'  7  16  ~/exam_dummy.yaml
+-'  27  0  ~/exam_dummy.yaml
+-'  28  0  ~/exam_dummy.yaml
+-'  1  0  ~/exam_dummy.yaml
+-'  22  7  ~/httpd.yml
+-'  1  2  ~/templates/hostinfo.j2
 -'  6  13  ~/exam_ansible.yaml
 -'  7  6  ~/exam_ansible.yaml
 -'  1  0  ~/files/hostinfo.j2
@@ -111,235 +193,281 @@ $
 -'  7  53  ~/exam_tag.yaml
 -'  15  0  ~/exam_tag.yaml
 -'  1  0  ~/exam_tag.yaml
--'  3  25  ~/tag.yaml
--'  19  0  ~/tag.yaml
--'  18  6  ~/tag.yaml
--'  1  0  ~/tag.yaml
--'  20  0  ~/hosts
--'  21  0  ~/hosts
--'  13  0  ~/hosts
--'  1  0  ~/hosts
--'  15  6  ~/exam_adhoc.yaml
--'  8  6  ~/exam_adhoc.yaml
--'  2  0  ~/exam_adhoc.yaml
--'  3  2  ~/exam_adhoc.yaml
--'  16  0  ~/exam_adhoc.yaml
--'  1  0  ~/exam_adhoc.yaml
--'  11  5  ~/exam_adhoc.sh
--'  5  2  ~/exam_adhoc.sh
--'  12  0  ~/exam_adhoc.sh
--'  22  7  ~/httpd.yml
--'  1  0  ~/crypt.yaml
--'  1  0  ~/.exam_httpd-auth.yaml.swp
--'  1  54  ~/.vimrc
--'  8  5  ~/httpd.yml
--'  28  1  ~/exam_httpd-auth.yaml
--'  1  0  ~/exam_httpd-auth.
--'  1  0  ~/exam_httpd-auth.yaml
--'  37  2  ~/exam/exam_httpd-auth.yaml
--'  1  0  ~/exam/exam_httpd-auth.yaml
--'  1  0  ~/exam/.exam_httpd-auth.yaml.swp
--'  22  6  ~/exam_httpd.yaml
--'  21  7  ~/exam_httpd.yaml
--'  27  6  ~/exam_httpd.yaml
--'  28  1  ~/exam_httpd.yaml
--'  25  6  ~/exam_httpd.yaml
--'  17  6  ~/exam_httpd.yaml
--'  5  11  /etc/hosts
--'  4  0  /etc/hosts
--'  23  3  ~/exam_httpd.yaml
--'  15  5  ~/exam_httpd.yaml
--'  1  0  ~/exam_httpd.yaml
--'  9  0  /opt/ansible/dynamic/inventory/ansible.cfg
--'  1  0  /opt/ansible/dynamic/inventory/ansible.cfg
--'  9  2  ~/httpd.yml
--'  7  5  ~/httpd.yml
--'  1  0  ~/httpd.yml
--'  4  2  ~/lineinreplace.yaml
--'  1  0  ~/lineinreplace.yaml
--'  1  0  /etc/hosts
--'  2  16  ~/copynewfile.yaml
--'  10  6  ~/copynewfile.yaml
--'  11  0  ~/copynewfile.yaml
--'  1  0  ~/copynewfile.yaml
--'  17  11  ~/unarchive.yaml
--'  19  6  ~/unarchive.yaml
--'  15  6  ~/unarchive.yaml
--'  20  6  ~/unarchive.yaml
--'  13  6  ~/unarchive.yaml
--'  9  6  ~/unarchive.yaml
--'  24  6  ~/unarchive.yaml
--'  21  3  ~/unarchive.yaml
--'  14  27  ~/unarchive.yaml
--'  25  0  ~/unarchive.yaml
--'  1  0  ~/unarchive.yaml
--'  1  7  ~/.vaultpwd
--'  5  1  ~/roles/ansroles/meta/main.yaml
--'  3  1  ~/roles/ansroles/meta/main.yaml
--'  11  9  ~/roles/firewall/tasks/main.yaml
--'  15  3  ~/roles/firewall/tasks/main.yaml
--'  8  1  ~/roles/myfirewall/tasks/main.yml
--'  1  0  ~/roles/myfirewall/tasks/main.yml
--'  2  13  ~/roles/firewall/defaults/main.yaml
--'  1  0  ~/roles/firewall/defaults/main.yaml
--'  14  2  ~/roles/firewall/tasks/main.yaml
--'  3  2  ~/task2_roles1.yaml
--'  13  2  ~/roles/firewall/tasks/main.yaml
--'  12  3  ~/roles/firewall/tasks/main.yaml
--'  4  1  ~/roles/ansroles/meta/main.yaml
--'  3  2  ~/roles/firewall/handlers/main.yaml
--'  1  0  ~/roles/firewall/handlers/main.yaml
--'  1  0  ~/roles/firewall/tasks/main.yaml
 
 # History of marks within files (newest to oldest):
 
-> ~/exam_ansible.yaml
-	"	6	13
-	^	6	14
-	.	6	13
+> ~/exam/roles/examfun/tasks/main.yaml
+	"	29	2
+	^	30	19
+	.	23	2
+	+	11	24
+	+	11	0
+	+	11	2
+	+	11	4
+	+	11	14
 	+	12	0
-	+	6	8
-	+	9	0
-	+	8	38
-	+	12	7
-	+	12	5
-	+	8	48
-	+	12	0
-	+	12	7
-	+	8	47
-	+	12	40
-	+	12	0
-	+	7	11
-	+	6	13
-
-> ~/files/hostinfo.j2
-	"	1	0
-	^	1	1
-	.	1	0
-	+	2	14
-	+	2	140
-	+	1	0
-
-> ~/exam/exam_ansible.yaml
-	"	7	144
-	^	7	145
-	.	7	144
-	+	8	59
-	+	7	15
-	+	7	144
-
-> ~/hostinfo.j2
-	"	1	87
-	^	1	88
-	.	1	87
-	+	1	127
-	+	1	118
-	+	1	23
-	+	1	58
-	+	1	58
-	+	1	23
-	+	1	123
-	+	1	23
-	+	1	58
-	+	1	89
-	+	1	87
-
-> ~/copyfile.yaml
-	"	1	0
-
-> ~/exam_adhoc.sh
-	"	3	144
-	^	3	145
-	.	3	144
-	+	1	3
-	+	5	29
-	+	11	5
-	+	1	147
-	+	1	153
-	+	1	0
-	+	1	136
-	+	1	11
-	+	3	165
-	+	3	144
-
-> ~/exam_tag.yaml
-	"	7	53
-	^	7	54
-	.	7	53
-	+	6	62
-	+	16	0
-	+	12	50
-	+	14	12
-	+	15	2
-	+	12	49
-	+	7	53
-
-> ~/tag.yaml
-	"	3	25
-	^	3	26
-	.	3	25
-	+	7	25
-	+	25	6
-	+	7	25
-	+	24	0
-	+	5	6
-	+	6	19
-	+	23	0
-	+	8	10
-	+	22	0
-	+	6	7
-	+	8	8
-	+	21	0
-	+	6	0
-	+	10	10
+	+	11	11
+	+	11	21
+	+	11	1
 	+	11	17
-	+	21	4
-	+	5	22
-	+	20	0
-	+	15	11
-	+	17	10
-	+	18	13
-	+	19	2
-	+	3	25
-
-> ~/hosts
-	"	20	0
-	.	21	0
-	+	21	0
-	+	20	9
-	+	21	0
-
-> ~/exam_adhoc.yaml
-	"	15	6
-	^	15	13
-	.	15	12
-	+	19	0
-	+	7	47
-	+	9	16
-	+	9	0
-	+	7	0
-	+	9	0
-	+	19	0
-	+	18	0
-	+	9	15
+	+	11	17
+	+	11	4
+	+	11	0
 	+	12	0
-	+	17	0
+	+	11	0
+	+	11	0
+	+	32	0
+	+	11	0
+	+	11	0
+	+	12	0
+	+	11	0
+	+	11	8
+	+	32	0
+	+	11	27
+	+	32	0
+	+	11	0
+	+	13	18
+	+	14	27
+	+	19	6
+	+	12	2
+	+	25	24
+	+	27	9
+	+	26	7
+	+	27	10
+	+	28	16
+	+	31	2
+	+	10	0
+	+	5	4
+	+	6	2
+	+	7	4
+	+	8	4
+	+	9	4
+	+	10	0
+	+	4	18
+	+	6	10
+	+	13	17
+	+	16	14
+	+	18	0
+	+	23	14
+	+	24	20
+	+	20	17
+	+	27	17
+	+	29	13
+	+	30	18
 	+	16	2
-	+	3	19
-	+	2	6
-	+	8	17
-	+	14	12
-	+	15	12
+	+	23	2
 
-> ~/httpd.yml
-	"	22	7
-	^	22	19
-	.	23	0
-	+	8	17
+> ~/exam_roles.yaml
+	"	8	18
+	^	8	19
+	.	8	18
+	+	3	40
+	+	8	5
+	+	6	0
+	+	9	8
+	+	12	27
+	+	13	2
+	+	8	18
+
+> ~/exam/unarchive.yaml
+	"	22	2
+	^	22	3
+	.	22	3
+	+	17	16
+	+	19	4
+	+	13	0
+	+	21	27
+	+	22	3
+
+> ~/exam/.vaultpwd
+	"	1	7
+	^	1	8
+	.	1	7
+	+	1	7
+
+> ~/exam/crypt.yaml
+	"	1	15
+	^	1	16
+	.	2	0
+	+	2	7
+	+	2	0
+
+> ~/roles/usercreate/tasks/main.yaml
+	"	30	18
+	^	30	19
+	.	30	18
+	+	6	11
+	+	4	18
+	+	13	18
+	+	16	13
+	+	17	17
+	+	20	0
+	+	21	0
+	+	27	0
 	+	23	0
+	+	29	0
+	+	24	18
+	+	30	18
 
-> ~/crypt.yaml
+> ~/main.yaml
 	"	1	0
 
-> ~/.exam_httpd-auth.yaml.swp
+> ~/exam/roles/examfun/meta/main.yaml
+	"	10	2
+	^	10	3
+	.	10	2
+	+	5	17
+	+	10	2
+
+> ~/exam/roles/examfun/vars/main.yaml
+	"	9	11
+	^	9	12
+	.	9	11
+	+	6	12
+	+	15	7
+	+	18	11
+	+	9	11
+
+> ~/exam/failweb.yaml
+	"	11	14
+	.	11	13
+	+	13	8
+	+	7	51
+	+	12	12
+	+	8	21
+	+	11	13
+
+> ~/exam/exam_galaxy.yaml
+	"	5	21
+	^	5	22
+	.	5	21
+	+	5	21
+
+> ~/ansible.cfg
+	"	4	34
+	^	4	36
+	.	4	34
+	+	4	34
+
+> ~/exam/exam_failweb.yaml
+	"	29	21
+	^	16	17
+	.	16	16
+	+	10	19
+	+	13	10
+	+	5	0
+	+	13	24
+	+	12	36
+	+	13	26
+	+	17	22
+	+	19	22
+	+	20	31
+	+	22	35
+	+	25	29
+	+	31	2
+	+	25	28
+	+	18	25
+	+	8	16
+	+	18	20
+	+	26	43
+	+	30	30
+	+	16	16
+
+> ~/exam/exam_failweb.
 	"	1	0
+
+> ~/exam/exam_access.yaml
+	"	14	11
+	^	14	12
+	.	14	11
+	+	14	45
+	+	16	21
+	+	16	21
+	+	22	15
+	+	23	2
+	+	14	25
+	+	5	21
+	+	5	20
+	+	5	0
+	+	11	4
+	+	5	0
+	+	11	0
+	+	4	2
+	+	11	2
+	+	13	33
+	+	14	11
+
+> ~/exam/exam_orig_access.yaml
+	"	20	6
+	^	18	20
+	.	15	8
+	+	19	12
+	+	20	30
+	+	22	18
+	+	13	19
+	+	19	3
+	+	14	30
+	+	17	13
+	+	23	37
+	+	24	18
+	+	18	19
+	+	14	6
+	+	15	8
+
+> ~/exam_access.yaml
+	"	1	0
+
+> ~/exam/exam_saveabort.yaml
+	"	15	2
+	^	15	3
+	.	15	2
+	+	9	13
+	+	10	29
+	+	14	18
+	+	15	2
+
+> ~/exam/saveabort.yaml
+	"	16	57
+	^	16	58
+	.	16	44
+	+	26	8
+	+	8	35
+	+	11	27
+	+	14	5
+	+	11	27
+	+	12	28
+	+	13	0
+	+	25	0
+	+	12	8
+	+	18	10
+	+	17	4
+	+	24	2
+	+	17	2
+	+	19	2
+	+	18	4
+	+	20	4
+	+	21	6
+	+	22	6
+	+	23	6
+	+	17	7
+	+	18	8
+	+	12	26
+	+	9	20
+	+	12	27
+	+	9	8
+	+	12	21
+	+	16	36
+	+	13	0
+	+	12	16
+	+	16	21
+	+	23	10
+	+	12	62
+	+	16	44
+
+> ~/exam/noshutdown.yaml
+	"	9	0
+	^	9	0
+	.	9	0
+	+	2	5
+	+	1	3
+	+	9	0

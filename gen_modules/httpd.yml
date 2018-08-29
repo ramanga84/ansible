@@ -1,0 +1,22 @@
+---
+- name: first test with playbook
+  hosts: all 
+  tasks:
+  - name: install httpd
+    yum:
+     name: httpd
+     state: latest
+  - name: start the service
+    service:
+     name: httpd
+     state: started
+     enabled: yes
+  - name: install vfstpd
+    yum:
+      name: vsftpd
+      state: latest
+  - name: start the vfstptd
+    service:
+       name: vsftpd
+       state: started
+       enabled: yes

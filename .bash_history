@@ -1,446 +1,3 @@
-vi webserver.yaml
-ansible-playbook webserver.yaml --check
-ansible all -m ping
-vi hosts
-ansible all -m ping
-ip a
-ansible-doc -l
-ansible-doc -l blockinfile
-ansible-doc blockinfile
-!
-ls -l
-vi url.yaml
-vim url.yaml
-ansible-playbook url.yaml 
-ip a
-reboot
-ansible-playbook url.yaml 
-sudo vi /etc/hosts
-ansible-playbook url.yaml 
-vi .vimrc
-vi url.yaml 
-vi webserver.yaml 
-ssh ansiblec1
-ls -l
-vi vfstpd.yaml
-vim vsftpd.yaml
-ansible all -m ping
-vi /etc/hosts
-sudo vim /etc/hosts
-ansible all -m ping
-ansible-playbook vsftpd.yaml 
-vim vsftpd.yaml
-ansible-playbook vsftpd.yaml 
-ansible all -m command
-ansible all -m "cat /etc/hosts"
-ansible all -m command "cat /etc/hosts"
-ansible all -m "cat /etc/hosts"
-ansible all -m command "cat /etc/hosts"
-ansible all -m shell -a "cat /etc/hosts"
-ssh ansiblec2
-vi /home/ansible/.ssh/known_hosts
-ssh ansiblec2
-ssh ansiblec1
-ssh ansiblelab
-ssh ansiblec1
-ssh ansiblec2
-vi /home/ansible/.ssh/known_hosts
-sudo vi /etc/hosts
-ssh ansiblec2
-ssh ansiblelab
-ssh ansiblec1
-ansible all -m shell -a "cat /etc/hosts"
-ls - 
-ls -l
-rm *.retry
-ls -l
-ansible all -m shell -a "ps -ef |grep http"
-ansible all -m shell -a "telnet localhost 80"
-vi hosts 
-vi jumphost.j2
-cat new.yaml 
-cat template.yaml 
-vi template.yaml 
-ansible-playbook template.yaml 
-cat hosts 
-vi template.yaml 
-cat hosts 
-ansible-playbook template.yaml 
-ssh ansiblec2
-ssh ansiblec1
-vi /etc/ssh/sshd_config 
-sudo vi /etc/ssh/sshd_config 
-vi ansible.cfg 
-ansible-playbook template.yaml 
-ansible all -m shell -a "/var/www/html/index.html"
-ssh localhost
-cd .ssh/
-ls -l
-cp id_rsa.pub authorized_keys
-ssh localhost
-ansible all -m shell -a "/var/www/html/index.html"
-cd
-ansible all -m shell -a "/var/www/html/index.html"
-ls -al 
-ssh ansiblelab
-ansible all -m shell -a "ls -al /var/www/html/index.html"
-ansible-playbook httpd.yml 
-vi ansible.cfg 
-cat .vim
-cat .vimrc 
-curl 192.168.0.21
-ansible all -m shell -a "curl 192.168.0.21"
-ansible all -m uri -a "get_url: 192.168.0.21"
-ansible all -m shell -a "gte_url: 192.168.0.21"
-ansible all -m shell -a "get_url: 192.168.0.21"
-ansible-doc shell
-ansible all -m uri -a "get_url: 192.168.0.21"
-cat ansible.cfg 
-ansible all -m ping
-ansible localhost -m ping
-vi hosts 
-ansible localhost -m ping
-vi hosts 
-ansible localhost -m ping
-vi hosts 
-ansible all -m ping
-vi createfile.txt
-vi createfile.yaml
-ansible all -m ping
-ping google.com
-ls -l
-tar -zxf roles-myvhost.tar.gz 
-ls -l
-tar -zxf examfun.tar.gz 
-ls -l
-vi register.yaml
-ansible-playbook register.yaml 
-sudo vi /etc/hosts
-ansible-playbook register.yaml 
-vi register.yaml
-ansible-playbook register.yaml 
-ll
-ansible-doc command
-vi register.yaml
-vi verify.yaml
-ansible-playbook verify.yaml 
-vi verify.yaml
-ansible-playbook verify.yaml 
-vi verify.yaml
-ansible-playbook verify.yaml 
-ansible-doc shell
-clear
-ansible-playbook verify.yaml 
-cat verify.
-cat verify.yaml 
-vi verify.yaml 
-ansible-playbook verify.yaml 
-vi check_debug.yaml
-ansible-playbook check_debug.yaml 
-rpm -qa |grep mysql
-echo $?
-vi verify.yaml 
-vi check_debug.yaml
-vi verify.yaml 
-vi task_jun17.yaml
-ls -l
-vi task_jun17.yaml
-rpm -qa |grep http
-echo $?
-vi task_jun17.yaml
-ansible-playbook task_jun17.yaml 
-vi task_jun17.yaml
-ansible-playbook task_jun17.yaml -vvv
-vi task_jun17.yaml
-ansible-playbook task_jun17.yaml -vvv
-vi task_jun17.yaml
-ansible-playbook task_jun17.yaml 
-vi task_jun17.yaml
-ansible-playbook task_jun17.yaml 
-cp task_jun17.yaml task2_jun17.yaml
-vi task2_jun17.yaml 
-ansible-playbook task2_jun17.yaml 
-vi task2_jun17.yaml 
-ansible-playbook task2_jun17.yaml 
-vi task2_jun17.yaml 
-ansible-playbook task2_jun17.yaml 
-vi task2_jun17.yaml 
-ansible-playbook task2_jun17.yaml 
-service httpd stop
-ansible-playbook task2_jun17.yaml 
-cat ansible.cfg 
-vi ansible.cfg 
-ansible-playbook task2_jun17.yaml 
-vi ansible.cfg 
-vi task2_jun17.yaml 
-ansible-playbook task2_jun17.yaml 
-vi task2_jun17.yaml 
-ansible-playbook task2_jun17.yaml 
-vi task_jun17.yaml 
-vi task2_jun17.yaml 
-ansible-playbook task_jun17.
-ansible-playbook task_jun17.yaml 
-vi task2_jun17.yaml 
-vi task_jun17.yaml 
-ansible-playbook task_jun17.yaml 
-vi task_jun17.yaml 
-ansible-playbook task_jun17.yaml 
-vi task_jun17.yaml 
-ps -ef |grep walle
-rpm -ql kwallet
-service kwallet sttaus
-service kwallet status
-vi task_jun17.yaml 
-service httpd stop
-vi task_jun17.yaml 
-ps -ef |grep httpd
-ansible-playbook task_jun17.yaml 
-vi task_jun17.yaml 
-ansible-playbook task_jun17.yaml 
-vi task_jun17.yaml 
-ip a
-ansible all -m ping
-sudo vi /etc/hosts
-ansible all -m ping
-ip a
-ansible all -m ping
-ssh ansiblec2
-ansible all -m ping
-ls -al 
-cd questions/
-ls -l
-cd ..
-cd examfun
-ls -l
-cd tasks/
-ls -l
-cat main.yml 
-ls -al ../templates/
-cd ..
-du -sh
-cd ..
-cat roles.yaml 
-vi testrole.yaml
-mkdir command
-cd command
-mkdir tasks templates vars handlers defaults
-cd tasks
-vi main.yaml
-cd ../templates/
-ls l 
-ls -l
-vi index.j2
-cd ../tasks/
-vi main.yaml 
-cd ../handlers/
-vi main.yaml
-cd ..
-cp -r command roles/my
-ls -al roles/
-rm roles/my
-rm -rf roles/my
-cp -r command roles/
-ls -l
-ls -l roles
-cd command/
-vi tasks/main.yaml 
-vi handlers/main.yaml 
-ls -l
-rm -rf defaults
-mkdir files
-mv templates/index.j2 files/
-rm -rf templates/
-ls -l files/
-cd ..
-ansible-playbook testrole.yaml 
-ls -l
-grep -i handler *.yaml
-vi copyfile.yaml 
-cd roles/command/
-ls -l
-vi handlers/
-vi handlers/main.yaml 
-cd
-ansible-playbook testrole.yaml 
-vi /home/ansible/.ssh/known_hosts
-ansible all -m ping
-ansible-playbook testrole.yaml 
-cd roles/command/
-ls -l
-vi tasks/main.yaml 
-cd vars/
-vi main.yaml
-ls -l
-ls -al mountyaml/
-cat register.yaml 
-cat webserver.yaml 
-cat roles/myvhost/
-cat roles/myvhost/handlers/main.yml 
-cat roles/myvhost/meta/main.yml 
-cat roles/myfirewall/defaults/main.yml 
-ansible all -m ping
-vi /etc/hosts
-sudo vi /etc/hosts
-ansible all -m ping
-ls -l
-ansible-doc firewalld
-vi task2_roles1.yaml
-cd roles
-mkdir ansroles
-cd ansroles
-mkdir tasks
-cd tasks
-vi main.yaml
-cd ..
-mkdir files
-cd files/
-vi test1.txt
-mkdir vars
-cd vars
-vi main.yaml
-cd ../../
-cd ../
-ls l
-ls -l
-cat myvhost/
-ansible all -m ping
-cd roles
-ls -l
-cd ansroles/
-ls -l
-cd tasks/
-ls -l
-cat main.yaml 
-cd ansroles/
-cd ..
-ls -l
-mkdir vars
-cd vars
-vi main.yaml
-cd ../
-mkdir templates
-cd templates
-ls -l
-vi machineoutput.j2
-cd ../
-cd tasks/
-vi main.yaml 
-cd ..
-cd
-ansible-playbook task2_roles1.yaml 
-vi task2_roles1.yaml 
-ansible-playbook task2_roles1.yaml 
-vi roles/ansroles/tasks/main.yaml 
-ansible-playbook task2_roles1.yaml 
-vi roles/ansroles/tasks/main.yaml 
-ansible-playbook task2_roles1.yaml 
-vi roles/ansroles/tasks/main.yaml 
-cd roles/ansroles/files/
-ls -l
-cp ../templates/machineoutput.j2 .
-cd ..
-ls -lcd
-cd
-ansible-playbook task2_roles1.yaml 
-ssh ansiblec2
-sudo vi /etc/hosts
-cd roles/ansroles/
-ls -l
-vi templates/machineoutput.j2 
-cd templates/
-mv machineoutput.j2 output.yaml
-vi output.yaml 
-cd ..
-cd roles/ansroles/
-cd
-ansible-playbook task2_roles1.
-ansible-playbook task2_roles1.yaml 
-ssh ansiblec2
-cd roles/ansroles/templates/
-ls -al
-mv output.yaml main.yaml
-vi main.yaml 
-cd roles/ansroles/
-cd templates/
-cat main.yaml 
-cd ..
-cd
-tree
-yum install tree
-sudo yum install tree
-tree
-cd roles/ansroles/
-tree
-cat tasks/main.yaml 
-cat templates/main.yaml 
-cat files/machineoutput.j2 
-cd templates/
-mv main.yaml machineoutput.j2
-rm ../files/machineoutput.j2 
-ls -l
-cat machineoutput.j2 
-cd ../
-cd
-ansible-playbook task2_roles1.yaml 
-sudo vi /etc/hosts
-ansible all -m ping
-vi home/ansible/.ssh/known_hosts
-vi /home/ansible/.ssh/known_hosts
-ansible all -m ping
-vi /home/ansible/.ssh/known_hosts
-ansible all -m ping
-ansible-playbook task2_roles1.yaml 
-cd roles/ansroles/
-tree
-vi tasks/main.yaml 
-mv files /var/tmp/
-ls -l
-cd
-ansible-playbook task2_roles1.yaml 
-cat roles/ansroles/tasks/main.yaml 
-vi roles/ansroles/tasks/main.yaml
-ansible-playbook task2_roles1.yaml 
-vi roles/ansroles/tasks/main.yaml
-ansible-playbook task2_roles1.yaml 
-ls -al /var/tmp/
-cat /var/tmp/machineoutput.txt 
-cd roles
-cd ansroles/
-ls -l
-cat ../myvhost/meta/main.yml 
-cd
-cat task2_roles1.yaml 
-vi with_items.yaml
-cd roles
-mkdir examfun
-cd examfun/
-mkvars
-mkdir vars
-cd vars
-ls -l
-vi main.yaml
-vi main.yam
-vi main.yaml
-cd ..
-vi with_items.yaml 
-ansible-playbook with_items.yaml 
-ssh ansiblec1
-ansible-doc when
-vi block.yaml
-ansible-playbook block.yaml 
-vi block.yaml
-ansible-playbook block.yaml 
-vi block.yaml
-ansible-playbook block.yaml 
-vi block.yaml
-ansible all -m ping
-ls -l
-cd roles
-cd ..
-cat task2_roles1.yaml 
-cd roles
-cd ansroles/
-ls -l
 cd templates/
 ls -l
 cat main.yaml 
@@ -998,3 +555,446 @@ ansible ansiblelab,ansiblec1,ansiblec2 -m command -a "rm  /usr/local/runme.sh"
 ansible ansiblelab,ansiblec1,ansiblec2 -m command -a "ls -l /usr/local/runme.sh"
 ansible-doc setup
 ansible all -m setup -a "ansible_hostname"
+ansible all -m setup
+ansible --version 
+ansible-doc -l
+ansible-doc copy
+sudo vi /etc/hosts
+ansible all -m setup -a "filter=inventory_hostname"
+>/home/ansible/.ssh/known_hosts
+ansible all -m setup -a "filter=inventory_hostname"
+vi exam_ansible.yaml
+vi hostinfo.j2
+ansible-playbook exam_ansible.yaml 
+cat /etc/hosts
+ssh 192.168.0.50
+cat *.j2
+grep j2 ./*
+vi copyfile.yaml 
+cat jumphost.j2 
+ls -l *.j2
+cat motd.j2 
+cat hostinfo.j2
+vi copyfile.yaml 
+vi hostinfo.j2
+ansible-playbook exam_ansible.yaml 
+ansible ansiblec1,ansiblec2 -m command -a "ls -l /var/www/html/hostinfo.html"
+ansible ansiblec1,ansiblec2 -m command -a "cat /var/www/html/hostinfo.html"
+vi exam_ansible.yaml 
+ls -l /var/www/vhosts/
+ls -l /var/www/vhosts/ansiblelab2/
+vi exam_ansible.yaml 
+ansible-playbook exam_ansible.yaml 
+vi exam_ansible.yaml 
+ansible-playbook exam_ansible.yaml 
+vi exam_ansible.yaml 
+ansible-playbook exam_ansible.yaml 
+ip a
+vi exam_ansible.yaml 
+cat exam_ansible.yaml
+cat hostinfo.j2 
+vi hostinfo.j2 
+ansible-playbook exam_ansible.yaml 
+vi exam_ansible.yaml
+ansible-playbook exam_ansible.yaml 
+vi hostinfo.j2 
+cat hostinfo.j2 
+cat template.yaml 
+mkdir templates
+cp hostinfo.j2 templates/
+vi exam_ansible.yaml
+ansible-playbook exam_ansible.yaml 
+ansible ansiblec1,ansiblec2 -m command -a "cat /var/www/html/hostinfo.html"
+ansible ansiblec1,ansiblec2 -m command -a "cat /var/www/vhosts/hostinfo.html"
+ansible ansiblec1,ansiblec2 -m command -a "cat /var/www/vhosts/{{ ansible_hostname }}/hostinfo.html"
+ansible ansiblec1,ansiblec2 -m shell -a "cat /var/www/vhosts/{{ ansible_hostname }}/hostinfo.html"
+mv hostinfo.j2 old.j2
+vi exam_ansible.yaml
+ansible-playbook exam_ansible.yaml 
+mkdir files
+cp templates/hostinfo.j2 files/
+ansible-playbook exam_ansible.yaml 
+cd exam
+vi exam_ansible.yaml
+cd ..
+ansible-playbook exam/exam_ansible.yaml 
+cd exam
+vi exam_ansible.yaml 
+cd
+ansible-playbook exam/exam_ansible.yaml 
+cat /etc/hosts
+cat exam_adhoc.sh 
+cd roles
+ls -l 
+cd ansroles
+ls -l
+cd templates/
+ls -l
+cat machineoutput.j2 
+cd ..
+vi files/hostinfo.j2 
+ansible-playbook exam_ansible.yaml 
+vi files/hostinfo.j2 
+ansible-playbook exam_ansible.yaml 
+cd roles/ansroles/files/
+cat test1.txt 
+cd ..
+ls -l
+cat tasks/main.yaml 
+cd ..cd
+cd
+cp files/hostinfo.j2 templates/hostinfo.j2 
+vi exam_ansible.yaml 
+ansible-playbook exam_ansible.yaml 
+git init
+git push
+git config --global push.default matching
+git help config
+git help 
+git commit
+git commit -a
+git add all
+git add *
+ls -l
+rm :q!
+ls -l
+git add *
+git add --all
+git commit -m "commit"
+git push
+cat exam_ansible.yaml 
+cat templates/hostinfo.j2 
+vi templates/hostinfo.j2 
+cat templates/hostinfo.j2 
+ansible-playbook exam_ansible.yaml 
+                                      
+ls -l
+cat httpd.yaml
+cat httpd.yml 
+cat hosts 
+cat ansible.cfg 
+ansible --help
+cat httpd.yml 
+cat .vimrc 
+vi httpd.yml 
+vi exam_dummy.yaml
+cat hosts 
+vi exam_dummy.yaml
+touch /tmp/answer.txt
+touch /tmp/answer2.txt
+ansible-playbook exam_dummy.yaml 
+ansible-playbook exam_dummy.yaml --tags prod
+cat hosts
+vi exam_dummy.yaml
+ansible-playbook exam_dummy.yaml --tags prod
+sudo vi /etc/hosts
+vi exam_dummy.yaml
+cat exam_tag.yaml 
+vi exam_dummy.yaml
+ansible-playbook exam_dummy.yaml --tags prod
+vi exam_dummy.yaml
+ansible-playbook exam_dummy.yaml --tags prod
+ansible-playbook exam_dummy.yaml --tags back
+ansible-playbook unarchive.yaml --vault-password-file=.vaultpwd
+vi exam_dummy.yaml
+cd roles
+ls -l
+cd ansroles/
+ls -l
+ca tasks/
+cat tasks/main.yaml 
+cat meta/main.yaml 
+cat templates/machineoutput.j2 
+ansible all - m setup 
+ansible all -m setup 
+cd
+ansible all -m setup 
+cat exam_ansible.yaml 
+cat templates/hostinfo.j2 
+cat exam/exam_ansible.yaml 
+ansible all -m setup 
+ansible all -m uri -a "url=http://localhost return_content=yes"
+ansible-doc uri
+ansible all -m uri -a "url=http://localhost/material return_content=yes"
+ansible all -m shell -a "mkdir /var/www/vhosts/`hostname`/materials/"
+ansible all -m shell -a "mkdir /var/www/vhosts/`inventory_hostname`/materials/"
+ansible all -m ping
+sudo vi /etc/hosts
+ansible all -m ping
+ansible --version
+cd exam
+vi exam_access.yaml
+cd 
+ansible-playbook exam/exam_access.yaml 
+vi exam_access.yaml
+vi exam/exam_access.yaml 
+ansible-playbook exam/exam_access.yaml 
+vi exam/exam_access.yaml 
+ansible-playbook exam/exam_access.yaml 
+vi exam/exam_access.yaml 
+ansible-playbook exam/exam_access.yaml 
+vi exam/exam_access.yaml 
+ansible-playbook exam/exam_access.yaml 
+vi exam/exam_access.yaml 
+ansible-playbook exam/exam_access.yaml 
+vi exam/exam_access.yaml 
+vi exam/exam_orig_access.yaml 
+ansible-playbook exam/exam_orig_access.yaml 
+vi exam/exam_orig_access.yaml 
+vi exam/exam_access.yaml 
+ansible-playbook exam/exam_access.yaml 
+ansible-playbook exam/exam_access.yaml --ignore_errors=true
+ansible-playbook --help
+vi exam/exam_access.yaml 
+ansible-playbook exam/exam_access.yaml 
+vi exam/exam_access.yaml 
+ansible-playbook exam/exam_access.yaml 
+vi exam/exam_access.yaml 
+ansible-playbook exam/exam_access.yaml 
+vi exam/exam_access.yaml 
+ansible-playbook exam/exam_access.yaml 
+vi exam/exam_access.yaml 
+ansible-playbook exam/exam_access.yaml 
+ansible ansiblab -m command -a " rpm -ivh /var/tmp/temp.rpm"
+ansible ansiblelab -m command -a " rpm -ivh /var/tmp/temp.rpm"
+ansible all -m ping
+sudo vi /etc/hosts
+ansible all -m ping
+cd roles
+cd 
+cd exam
+cd roles
+mkdir roles
+vi failweb.yaml
+bash
+ansible all -m ping
+cd exam
+cd
+l s-l
+ls -l
+rm *.retry
+ansible ansiblec1 -m yum -a "name=test state=latest"
+ansible ansiblec1 -m yum -a "name=httpd state=latest"
+ansible ansiblec1 -m service -a "name=test state=latest"
+ansible ansiblec1 -m service -a "name=test state=restarted"
+ansible ansiblec1 -m yum -a "name=httpd state=absent"
+ansible ansiblec1 -m service -a "name=httpd state=started"
+ansible-doc -l |grep user
+ansible-doc user
+cd examfun
+ls -l
+cat tasks/
+cat tasks/main.yml 
+cat vars/main.yml 
+ls -l meta/
+cd ..
+cd roles
+ls -l
+cd ansroles/
+ls -l
+cat tasks/main.yaml 
+cat vars/
+ansible-doc group
+cd
+ansible all -m group -a "name:css system=yes"
+ansible all -m group -a "name:css state=present "
+ansible all -m group -a "name:css  "
+ansible all -m ping
+cd exam/roles/
+l s-l
+ls -l
+cd examfun/
+l s-l
+ls -l
+cat roles/examfun/vars/main.yml
+ls -l
+\
+cd ..
+cd roles
+cd examfun/
+ls -l
+cd vars/
+ls -l
+cat main.yaml 
+cd ..
+ls -l
+cd ..
+cd roles
+ls -l
+ls -l command/
+ls -al tasks
+ls -l tasks
+ls -l command/tasks/
+cat command/tasks/main.yaml 
+cat command/handlers/main.yaml 
+pwd
+cat examfun/vars/main.yaml 
+cd ..
+ls -l
+cd examfun
+ls -l
+cat vars/main.yml 
+ansible-doc user
+cd 
+cd exam/roles/examfun/vars/
+cat main.yaml 
+cd ..
+pwd
+cd 
+cd roles
+cd ..
+grep -i dependenc ./*
+grep -i dependenc *.yaml
+grep -i depen *.yaml
+ls -l
+cat roles.yaml 
+cat task2_roles1.yaml 
+cd roles/ansroles/
+ls -l
+ls -l meta/main.yaml 
+cat meta/main.yaml
+cd ../
+cd exam/roles/examfun/
+cat meta/main.yaml 
+ansible all -m ping
+cd exam
+vi exam_failweb.yaml
+cd
+ansible-playbook exam/exam_failweb.yaml 
+cd exam
+vi exam_failweb.yaml
+cd
+ansible-playbook exam/exam_failweb.yaml 
+cd exam
+vi exam_failweb.yaml
+cd
+vi exam/exam_failweb.
+rm exam/exam_failweb.retry 
+sudo vi /etc/hosts
+ansible-playbook exam/exam_failweb.yaml 
+vi exam/exam_failweb.yaml 
+ansible-playbook exam/exam_failweb.yaml 
+vi exam/exam_failweb.yaml 
+ansible-playbook exam/exam_failweb.yaml 
+vi exam/exam_failweb.yaml 
+ansible-galaxy install geerlingguy.apache
+ansible-galaxy --help
+ansible-galaxy command --help
+ansible all -m shell -a " rpm -qa |grep apache"
+ansible all -m shell -a " rpm -qa |grep -i http"
+ansible-galaxy list ansible-role
+ansible-galaxy list ansible-role-httpd
+ansible-galaxy list ansible-role-apache
+ansible-galaxy -vvv list ansible-role-apache
+ansible-galaxy -vvv list geerlinguy.apache
+ansible-galaxy -vvv install geerlingguy.apache
+ansible-galaxy -vvv delete geerlingguy.apache
+cd exam
+ls -l
+cd roles
+ls -l
+cd
+vi ansible.cfg 
+cd exam
+vi exam_galaxy.yaml
+cd roles/
+mkdir examfun
+cd examfun/
+ls -l
+mkdir tasks meta files templates vars
+cd tasks
+vi main.yaml
+cd ../vars/
+ls -l
+vi main.yaml
+cd ..
+ls -l
+cd meta
+vi main.yaml
+cd ../tasks/
+vi main.yaml 
+cd ..
+cat ansible.cfg 
+vi exam_roles.yaml
+ansible-playbook exam_roles.yaml 
+ls -l exam/roles/examfun/
+cd exam/roles/examfun/
+ls -l
+rm -rf meta
+cd
+ansible-playbook exam_roles.yaml 
+cd /home/ansible/exam/roles
+ls -l
+cd
+cat roles.yaml 
+ls -l roles
+ls -l roles/myvhost/
+ls -l roles/myvhost/tasks/
+ls -l /home/ansible/exam/roles/examfun/
+ls -l /home/ansible/exam/roles/examfun/tasks/
+chmod 755 /home/ansible/exam/roles/examfun - R
+chmod 755 /home/ansible/exam/roles/examfun -R
+ls -l /home/ansible/exam/roles/examfun/tasks/
+ansible-playbook exam_roles.yaml 
+tree
+cd /home/ansible/exam/roles/
+tree
+cd
+vi exam_roles.yaml
+ansible-playbook exam_roles.yaml 
+cat exam_roles.yaml
+cp -pr /home/ansible/exam/roles/examfun roles/usercreate
+ls -l roles/usercreate/
+vi exam_roles.yaml 
+cat exam_roles.yaml
+ansible-playbook exam_roles.yaml 
+cat ansible.cfg 
+ls -l /home/ansible/exam/roles/
+ls -l /home/ansible/exam/roles/examfun/
+ls -l /home/ansible/exam/roles/examfun/tasks/main.yaml 
+cat /home/ansible/exam/roles/examfun/tasks/main.yaml 
+cd 
+grep -irl with_item *.yaml
+cat with_items.yaml 
+cd roles/usercreate/
+cd tasks/
+vi main.yaml 
+cd
+ansible-playbook exam_roles.yaml 
+cd roles/usercreate/tasks/
+vi main.yaml 
+cd
+ansible-playbook exam_roles.yaml 
+vi main.yaml 
+cd roles/usercreate/tasks/
+vi main.yaml 
+cd
+cd roles/usercreate/tasks/
+cd
+ansible-playbook exam_roles.yaml 
+cd -
+vi main.yaml 
+cd -
+ansible-playbook exam_roles.yaml 
+cd -
+cat unarchive.yaml 
+cd exam
+vi crypt.yaml
+cd
+ansible-vault decrypt crypt.yaml 
+cat crypt.yaml 
+cd exam
+vi crypt.yaml
+ansible-vault encrypt crypt.yaml
+vi .vaultpwd
+ansible-vault encrypt crypt.yaml --vault-pwd=.vaultpwd
+ansible-vault encrypt crypt.yaml 
+vi unarchive.yaml
+ansible all -m ping
+sudo vi /etc/hosts
+ansible all -m ping
+sudo vi /etc/hosts
+ansible all -m ping
+cd exam
+ls -l
+cat exam_access.yaml 

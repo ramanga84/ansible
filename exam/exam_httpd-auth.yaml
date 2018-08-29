@@ -24,8 +24,8 @@
    - name: replace authoverride
      replace:
       path: /etc/httpd/conf/httpd.conf
-      regexp: AuthOverride
-      replace: AuthConfig
+      regexp: "AllowOverride none"
+      replace: "AllowOverride AuthConfig"
       backup: yes
      notify:
       - restart httpd

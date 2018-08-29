@@ -1,0 +1,18 @@
+staff:
+       - alice
+       - raman
+       - arav
+       - rj
+       - div
+       - kums
+       - pal
+       - lyk
+guests:
+       - anand
+       - sul
+       - mithu
+       - paru
+revoke:
+       - kums
+       - pal
+       - lyk
