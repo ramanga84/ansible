@@ -1,0 +1,10 @@
+---
+- name: shutdown service
+  hosts: production,backup
+  tasks:
+   - name: shutdown
+     service:
+      name: httpd
+      state: stopped
+     when: inventory_hostname in groups [ "backup" ]
+

@@ -1,0 +1,31 @@
+---
+- name: fail verify yaml play
+  hosts: ansiblec1,ansiblec2
+  ignore_errors: yes
+  tasks:
+   - name: Verify and install the package
+     yum:
+      name: httpd
+      state: latest
+     register: pack
+   - name: debug
+     debug: msg="Installation failed"
+     when: pack.rc == 126 
+   - name: Start the serveice
+     service:
+      name: httpd
+      state: restarted
+     when: pack.rc != 126
+     register: service
+   - name: Failure notification
+     debug: msg="Failure to restart"
+     when: service.changed == false
+   - name: installation service failure
+     debug: msg="playbook unsuccessful"
+     when: pack.rc == 126 and service.changed == false
+   - name: installation and service success
+     debug: msg="success - yes it is"
+     when:
+      - pack.rc != 126
+      - service.changed == true
+...

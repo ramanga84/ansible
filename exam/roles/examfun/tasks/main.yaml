@@ -1,0 +1,31 @@
+--- 
+- name: Create the groups
+  group:
+     name: "{{ item }}"
+     state: present
+  with_items:
+     - staff
+     - guests
+     - webclients
+
+- name: This is a roles plar
+  user:
+    name: "{{ item }}"
+    groups: staff,webclients
+    state: present
+  with_items:
+     - "{{ staff }}"
+- name: Create users for guests
+  user:
+    name: "{{ item }}"
+    groups: guests,webclients
+    state: present
+  with_items:
+     - "{{ guests }}"
+- name: Revoke the users
+  user: 
+    name: "{{ item }}"
+    state: absent
+  with_items:
+   - "{{ revoke }}"
+...

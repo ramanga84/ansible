@@ -1,0 +1,15 @@
+---
+- name: save and abort
+  hosts: ansiblec1,ansiblec2,ansiblelab
+  tasks: 
+   - block:
+      - name: Verify the existnece
+        file: 
+         path: /var/tmp/create.html
+     rescue: 
+      - name: Create the file
+        copy:
+         content: "This file is created by playbook"
+         dest: /var/tmp/create.html
+         mode: 0644
+...

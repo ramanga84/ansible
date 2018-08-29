@@ -1,0 +1,26 @@
+---
+- name: playbook for block and rescue
+  hosts: ansiblelab,ansiblec1,ansiblec2
+  tasks:
+   - name: verify using bock
+     block:
+      - stat:
+         path: /var/tmp/create.html
+        register: st
+      - debug:
+         msg: 'File exists'
+        when: st_stat_exists is defined and st_stat_exists == True
+     rescue:
+      - debug: 
+          msg: 'File does not exist'
+        when: st_stat_exists is defined and st_stat_exists == False  
+        notify:
+         - create the file
+  handlers:
+    - name: create the file
+      copy:
+       content: " File is created by script"
+       dest: /var/tmp/create.html
+...
+
+         

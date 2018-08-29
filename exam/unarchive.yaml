@@ -1,0 +1,22 @@
+---
+- name: unarchiving using the vault
+  hosts: ansiblec1,ansiblec2,ansiblelab
+  tasks:
+   - name: crete the directory vaul
+     file:
+      path: /var/tmp/vault
+      state: directory
+   - name: install zip utility
+     yum:
+      name: zip
+      state: latest
+   - name: get the zip
+     get_url:
+      url: http://localhost/vault/vault.zip
+      dest: /var/tmp/vault
+      mode: 0644
+   - name: unzip the file
+     command: unzip -o -P {{ password }} /var/tmp/vault/vault.zip
+     args:
+      chdir: /var/tmp/vault/ 
+...

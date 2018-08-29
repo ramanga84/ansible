@@ -1,0 +1,23 @@
+---
+- name: Access the link playbook
+  hosts: ansiblec1,ansiblec2,ansiblelab
+  force_handlers: True
+  tasks:
+   - name: Access the uRL
+     uri:
+      url: http://192.168.0.61/materials/exam/accessible.html
+      return_content: yes
+     register: access
+     ignore_errors: True
+   - name: Debug
+     debug: msg="Failed miserable"
+     changed_when: "access.status != 200"
+     notify:
+      - create a file
+  handlers:
+   - name: create a file
+     copy:
+      content: "Dont have access"
+      dest: /var/tmp/noaccess.html
+      mode: 0644
+...

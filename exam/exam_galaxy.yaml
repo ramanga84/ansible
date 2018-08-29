@@ -1,0 +1,5 @@
+---
+- name: roles play
+  hosts: production
+  roles:
+   - { role: examfun }

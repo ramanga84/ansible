@@ -1,0 +1,9 @@
+---
+- name: start httpd
+  hosts: ansiblec1,ansiblec2,ansiblelab
+  tasks:
+   - name: service restart
+     service:
+      name: httpd
+      state: restarted
+

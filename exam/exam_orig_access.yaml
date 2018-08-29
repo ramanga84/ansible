@@ -1,0 +1,24 @@
+---
+- name: Verify the URL
+  hosts: production,backup
+  tasks:
+   - block: 
+      - name: Install Pythonlib-httpd
+        yum:
+         name: python-httplib2
+         state: latest
+      - name: Verify the url
+        uri:
+         url: http://localhost/material/access.html
+         return_content: yes
+      - name: Copy the output
+        copy:
+          content: "Am accessible"
+          dest: /var/tmp/accesshtml
+          mode: 0644
+     rescue:
+      - name: COpy the content
+        copy:
+         content: "Am not accessibe"
+         dest: /var/tmp/inaccess.html
+         mode: 0644
