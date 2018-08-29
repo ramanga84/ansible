@@ -1,0 +1,26 @@
+---
+- name: Dummy.yaml
+  hosts: production, backup
+  tasks:
+   - name:  COpy the file for prod
+     copy:
+      src: /tmp/answer.txt
+      dest: /var/tmp/answer.txt
+      mode: 0644
+      owner: ansible
+      group: ansible
+     when: inventory_hostname in groups [ "production" ] 
+     tags:
+      - prod
+   - name: Copy the backup file for backup
+     copy:
+      src: /tmp/answer2.txt
+      dest: /var/tmp/answer2.txt
+      mode: 0644
+      owner: ansible
+      group: ansible
+     when: inventory_hostname in groups [ "backup" ] 
+     tags:
+      - back
+...
+

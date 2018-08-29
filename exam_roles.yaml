@@ -1,0 +1,13 @@
+---
+- name: Verify the roles
+  hosts: ansiblec1, ansiblec2, ansiblelab
+  pre_tasks:
+   - debug: msg=" This is pre test"
+
+  roles: 
+   -  role: examfun 
+  tasks:
+   - debug: msg="task check"
+  post_tasks:
+   - debug: msg=" post task"
+...
